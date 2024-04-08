@@ -1,7 +1,5 @@
 import { AuthService } from './auth.service';
 import { Component } from '@angular/core';
-import { authCallbackInfo } from '../../types/auth.type';
-import { LoginLinkContract } from './interfaces/contract/loginLinkContract.interface';
 
 @Component({
   selector: 'app-auth',
@@ -17,10 +15,7 @@ export class AuthComponent {
   }
 
   ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
     var { code, state } = this.getCodeAndStateFromUrl();
-    console.warn("code: " + code + " state: " + state);
     if (code && state) {
       console.warn("calling eve with " + code);
       this.authService.getToken(code, state).subscribe((data) => {
