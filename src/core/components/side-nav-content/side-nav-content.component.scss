@@ -1,0 +1,15 @@
+a {
+  text-decoration: none;
+}
+
+.nav-list{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 0;
+}
+
+.nav-list:last-child {
+  align-self: flex-end;
+}

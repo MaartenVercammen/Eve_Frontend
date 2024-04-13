@@ -1,3 +1,11 @@
-<main>
-<router-outlet></router-outlet>
+<main class="mat-app-background">
+  <mat-sidenav-container class="side-nav-container">
+    <mat-sidenav mode="side" opened>
+      <app-side-nav-content/>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet>
+      </router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </main>

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './screens/home.component';
+import { DashboardRoutingModule } from './dashboard-routing.module';
 
 
 
@@ -9,7 +10,10 @@ import { HomeComponent } from './screens/home.component';
     HomeComponent
   ],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+  ],
+  providers: [
+    DashboardRoutingModule,
+  ],
 })
 export class DashboardModule { }

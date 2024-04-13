@@ -1,0 +1,18 @@
+<mat-nav-list class="nav-list">
+  <div>
+    <mat-list-item *ngFor="let item of items">
+      <mat-icon matListItemIcon  fontIcon="home"/>
+      <div>
+          <a colo [href]="item.link">{{ item.title }}</a>
+      </div>
+      <mat-divider></mat-divider>
+    </mat-list-item>
+  </div>
+  <mat-list-item>
+    <mat-icon matListItemIcon  fontIcon="login"/>
+    <div>
+        <a colo href="/login">Login</a>
+    </div>
+    <mat-divider></mat-divider>
+  </mat-list-item>
+</mat-nav-list>
