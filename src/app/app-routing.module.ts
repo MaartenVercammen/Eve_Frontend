@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from '../functions/dashboard/screens/home.component';
+import { HomeComponent } from '../functions/dashboard/screens/home/home.component';
 
 const routes: Routes = [
   {
@@ -12,7 +12,7 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'login',
+    path: 'auth',
     loadChildren: () => import('../functions/auth/auth.module').then(m => m.AuthModule)
   }
 ];

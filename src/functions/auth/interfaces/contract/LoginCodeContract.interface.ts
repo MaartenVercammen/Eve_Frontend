@@ -1,3 +1,4 @@
 export interface LoginCodeContract {
-  token: string
+  jwtToken: string
+  refreshToken: string
 }

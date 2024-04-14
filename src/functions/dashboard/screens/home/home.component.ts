@@ -1,3 +1,4 @@
+import { WalletService } from './../../../../core/services/wallet/wallet.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+
+  public isk = this.walletService.getBalance();
+
+  constructor(private walletService : WalletService) { }
 
 }

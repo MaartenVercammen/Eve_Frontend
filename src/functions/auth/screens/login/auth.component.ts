@@ -17,9 +17,8 @@ export class AuthComponent {
   ngOnInit(): void {
     var { code, state } = this.getCodeAndStateFromUrl();
     if (code && state) {
-      console.warn("calling eve with " + code);
       this.authService.getToken(code, state).subscribe((data) => {
-        console.log(data);
+        localStorage.setItem("token", data.jwtToken);
       });
     }
   }

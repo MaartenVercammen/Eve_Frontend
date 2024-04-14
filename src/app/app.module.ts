@@ -9,6 +9,7 @@ import { AuthModule } from '../functions/auth/auth.module';
 import { CoreModule } from '../core/core.module';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DashboardModule } from '../functions/dashboard/dashboard.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     CoreModule,
     MatSidenavModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    DashboardModule,
   ],
   bootstrap: [AppComponent],
   providers: [
